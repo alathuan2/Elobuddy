@@ -46,7 +46,7 @@ namespace DrMundo
             {
                 return;
             }
-            Chat.Print("[Vodka{0}] {1}", color, Program.ChampName, text);
+            Chat.Print("[Doctor{0}] {1}", color, Program.ChampName, text);
             _lastChatMsg = Environment.TickCount;
             _lastChatMsgText = text.Substring(0, text.Length >= 20 ? 20 : text.Length - 1);
         }
@@ -73,7 +73,7 @@ namespace DrMundo
                 return;
             }
             Console.ForegroundColor = color;
-            Console.WriteLine("[Vodka{0}] {1}", Program.ChampName, text);
+            Console.WriteLine("[Doctor{0}] {1}", Program.ChampName, text);
             Console.ResetColor();
             _lastConsoleMsg = Environment.TickCount;
             _lastConsoleMsgText = text.Substring(0, text.Length >= 20 ? 20 : text.Length - 1);
