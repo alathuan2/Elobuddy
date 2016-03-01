@@ -29,9 +29,9 @@ namespace Warwick
 
         private static void WelcomeMsg()
         {
-            Chat.Print("Doctor{0} Loaded. Have a splendid game!", Color.Red, ChampName);
+            Chat.Print("Doctor{0} Loaded. Good Luck!", Color.Red, ChampName);
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Doctor{0} Loaded. Have a splendid game!", ChampName);
+            Console.WriteLine("Doctor{0} Loaded. Good Luck!", ChampName);
             Console.ResetColor();
         }
     }
