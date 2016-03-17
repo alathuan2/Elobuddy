@@ -112,7 +112,7 @@ namespace Ryze
             SubMenu["LastHit"].Add("LastHitMana", new Slider("Mana Percent", 50, 0, 100));
 
             SubMenu["LaneClear"] = menu.AddSubMenu("LaneClear", "LaneClear");
-            SubMenu["LaneClear"].Add("LC", new KeyBind("LaneClear Key", false, KeyBind.BindTypes.HoldActive, 'X'));
+            SubMenu["LaneClear"].Add("LC", new KeyBind("LaneClear Key", false, KeyBind.BindTypes.HoldActive, 'V'));
             SubMenu["LaneClear"].Add("Q", new CheckBox("Use Q", true));
             SubMenu["LaneClear"].Add("W", new CheckBox("Use W", true));
             SubMenu["LaneClear"].Add("E", new CheckBox("Use E", true));
@@ -120,7 +120,7 @@ namespace Ryze
             SubMenu["LaneClear"].Add("LaneClearMana", new Slider("Mana Percent", 50, 0, 100));
 
             SubMenu["JungleClear"] = menu.AddSubMenu("JungleClear", "JungleClear");
-            SubMenu["JungleClear"].Add("JC", new KeyBind("JungleClear Key", false, KeyBind.BindTypes.HoldActive, 'X'));
+            SubMenu["JungleClear"].Add("JC", new KeyBind("JungleClear Key", false, KeyBind.BindTypes.HoldActive, 'V'));
             SubMenu["JungleClear"].Add("Q", new CheckBox("Use Q", true));
             SubMenu["JungleClear"].Add("W", new CheckBox("Use W", true));
             SubMenu["JungleClear"].Add("E", new CheckBox("Use E", true));
