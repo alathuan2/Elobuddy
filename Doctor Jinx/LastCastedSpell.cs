@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using EloBuddy;
 
-namespace MissFortune
+namespace Jinx
 {
     /// <summary>
     ///     Represents a last casted spell.
@@ -117,7 +117,7 @@ namespace MissFortune
         /// <param name="args">The <see cref="GameObjectProcessSpellCastEventArgs" /> instance containing the event data.</param>
         private static void Obj_AI_Hero_OnProcessSpellCast(Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args)
         {
-            if (sender is AIHeroClient)
+            if (sender is Obj_AI_Base)
             {
                 var entry = new LastCastedSpellEntry(args.SData.Name, Utils.TickCount, ObjectManager.Player);
                 if (CastedSpells.ContainsKey(sender.NetworkId))

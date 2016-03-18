@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using EloBuddy;
-using EloBuddy.SDK;
 
-namespace MissFortune
+namespace Jinx
 {
     /// <summary>
-    ///     Delegate for the event <see cref="Interrupter2.OnPossibleToInterrupt" />
+    ///     Delegate for the event <see cref="Interrupter.OnPossibleToInterrupt" />
     /// </summary>
     /// <param name="unit">The unit.</param>
     /// <param name="spell">The spell.</param>
@@ -73,7 +72,8 @@ namespace MissFortune
     /// <summary>
     ///     This class allows you to easily interrupt interruptable spells like Katarina's ult.
     /// </summary>
-    public static class Interrupter2
+    [Obsolete("Use Interrupter2", false)]
+    public static class Interrupter
     {
         /// <summary>
         ///     The spells
@@ -81,9 +81,9 @@ namespace MissFortune
         public static List<InterruptableSpell> Spells = new List<InterruptableSpell>();
 
         /// <summary>
-        ///     Initializes static members of the <see cref="Interrupter2" /> class.
+        ///     Initializes static members of the <see cref="Interrupter" /> class.
         /// </summary>
-        static Interrupter2()
+        static Interrupter()
         {
             #region Varus
 

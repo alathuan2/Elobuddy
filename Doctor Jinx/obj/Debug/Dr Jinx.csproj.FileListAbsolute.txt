@@ -1,0 +1,10 @@
+D:\Add-on\Doctor Jinx xong\bin\Debug\Jinx.exe.config
+D:\Add-on\Doctor Jinx xong\bin\Debug\Jinx.exe
+D:\Add-on\Doctor Jinx xong\bin\Debug\Jinx.pdb
+D:\Add-on\Doctor Jinx xong\bin\Debug\EloBuddy.dll
+D:\Add-on\Doctor Jinx xong\bin\Debug\EloBuddy.SDK.dll
+D:\Add-on\Doctor Jinx xong\bin\Debug\SharpDX.dll
+D:\Add-on\Doctor Jinx xong\bin\Debug\SharpDX.Direct3D9.dll
+D:\Add-on\Doctor Jinx xong\bin\Debug\Newtonsoft.Json.dll
+D:\Add-on\Doctor Jinx xong\obj\Debug\Jinx.exe
+D:\Add-on\Doctor Jinx xong\obj\Debug\Jinx.pdb
