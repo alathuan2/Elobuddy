@@ -19,7 +19,7 @@ namespace Twitch
         {
             Menu = MainMenu.AddMenu(MenuName, MenuName.ToLower());
             Menu.AddGroupLabel("Doctor Twitch");
-            Menu.AddLabel("Upvote for me. Please!");
+            Menu.AddLabel("Halo!");
             Menu.AddLabel("Good Luck.");
             ModesMenu.Initialize();
             PredictionMenu.Initialize();
