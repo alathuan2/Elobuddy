@@ -25,6 +25,7 @@ namespace Twitch
             SpellManager.Initialize();
             ModeManager.Initialize();
             Events.Initialize();
+            Damages.InitDamageIndicator();
             WelcomeMsg();
         }
 

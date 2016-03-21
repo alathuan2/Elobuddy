@@ -303,10 +303,17 @@ namespace Twitch
             private static readonly CheckBox _ksIgnite;
             private static readonly CheckBox _autoQ;
             private static readonly CheckBox _stealthRecall;
+            private static readonly CheckBox _showHPBar;
+            private static readonly CheckBox _showStats;
+            private static readonly CheckBox _showPercentage;
+            private static readonly CheckBox _calculateQ;
+            private static readonly CheckBox _calculateW;
+            private static readonly CheckBox _calculateE;
+            private static readonly CheckBox _calculateR;
             private static readonly Slider _potionMinHP;
             private static readonly Slider _potionMinMP;
             private static readonly Slider _autoQMinEnemies;
-
+            
             public static bool GapcloserUseW
             {
                 get { return _gapcloserW.CurrentValue; }
@@ -330,6 +337,34 @@ namespace Twitch
             public static bool StealthRecall
             {
                 get { return _stealthRecall.CurrentValue; }
+            }
+            public static bool ShowDamageIndicator
+            {
+                get { return _showHPBar.CurrentValue; }
+            }
+            public static bool ShowStats
+            {
+                get { return _showStats.CurrentValue; }
+            }
+            public static bool ShowPercentage
+            {
+                get { return _showPercentage.CurrentValue; }
+            }
+            public static bool CalculateQ
+            {
+                get { return _calculateQ.CurrentValue; }
+            }
+            public static bool CalculateW
+            {
+                get { return _calculateW.CurrentValue; }
+            }
+            public static bool CalculateE
+            {
+                get { return _calculateE.CurrentValue; }
+            }
+            public static bool CalculateR
+            {
+                get { return _calculateR.CurrentValue; }
             }
             public static int potionMinHP
             {
