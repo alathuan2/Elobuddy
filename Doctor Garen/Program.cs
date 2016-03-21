@@ -44,7 +44,7 @@ namespace Garen
         {
             Chat.Print("Doctor{0} Loaded.", System.Drawing.Color.LightBlue, ChampName);
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("Doctor{0} Loaded. Not Autobuddy!", ChampName);
+            Console.WriteLine("Doctor{0} Loaded. Good Luck!", ChampName);
             Console.ResetColor();
         }
     }

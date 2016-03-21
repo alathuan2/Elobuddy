@@ -10,7 +10,7 @@ namespace Garen
 {
     public static class Config
     {
-        private const string MenuName = "DrGaren";
+        private const string MenuName = "Garen";
 
         private static readonly Menu Menu;
 
@@ -62,7 +62,8 @@ namespace Garen
 
             public static class Combo
             {
-                private static readonly CheckBox _useQ;
+                private static readonly CheckBox _autoQ;
+				private static readonly CheckBox _useQ;
                 private static readonly CheckBox _useW;
                 private static readonly CheckBox _useE;
                 private static readonly CheckBox _useR;
@@ -73,8 +74,13 @@ namespace Garen
                 {
                     get { return _useQ.CurrentValue; }
                 }
-
-                public static bool UseW
+                
+                public static bool AutoQ
+                {
+                    get { return _autoQ.CurrentValue; }
+	        	}
+					
+				public static bool UseW
                 {
                     get { return _useW.CurrentValue; }
                 }
@@ -97,7 +103,8 @@ namespace Garen
                 static Combo()
                 {
                     MenuModes.AddGroupLabel("Combo");
-                    _useQ = MenuModes.Add("comboUseQ", new CheckBox("Use Q"));
+                    _autoQ = MenuMisc.Add("autoQ", new CheckBox("Auto Q after hitting enemy hero", false));
+					_useQ = MenuModes.Add("comboUseQ", new CheckBox("Use Q"));
                     _useW = MenuModes.Add("comboUseW", new CheckBox("Use W"));
                     _useE = MenuModes.Add("comboUseE", new CheckBox("Use E"));
                     _useR = MenuModes.Add("comboUseR", new CheckBox("Use R"));

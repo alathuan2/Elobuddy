@@ -105,7 +105,7 @@ namespace Garen
                 return;
             }
             // Check if we should use Q to attack heroes
-            if (SettingsMisc.AutoQ)
+            if (SettingsModes.AutoQ)
             {
                 if (target is AIHeroClient)
                 {
