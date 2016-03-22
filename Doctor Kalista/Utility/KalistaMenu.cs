@@ -52,6 +52,11 @@ namespace Kalista
             Misc.Add("e.harass", new CheckBox("E Harass"));
             Misc.Add("e.dontharasscombo", new CheckBox("Don't harass with E in combo"));
             Misc.Add("e.beforedie", new CheckBox("E before die"));
+            Misc.Add("w.dragonorbaron", new CheckBox("Auto W on Dragon", false));
+            Misc.Add("w.castbaron",
+                new KeyBind("Cast W on Baron", false, KeyBind.BindTypes.HoldActive, "Y".ToCharArray()[0]));
+			Misc.Add("w.castdragon",
+                new KeyBind("Cast W on Dragon", false, KeyBind.BindTypes.HoldActive, "U".ToCharArray()[0]));
             //Activator Settings
             ActivatorSettings = MenuPrincipal.AddSubMenu("Activator");
             ActivatorSettings.Add("use.botrk.cutlass", new CheckBox("Use BotRK/Cutlass"));

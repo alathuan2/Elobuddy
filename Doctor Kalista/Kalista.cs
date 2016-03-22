@@ -323,9 +323,9 @@ namespace Kalista
                     !Player.IsRecalling() && W.Ready() && Player.Position.CountEnemiesInRange(1500) <= 0)	
                     if (Player.Distance(DragonLocation) <= W.Range)
                     {
-                        E.Cast(DragonLocation);
+                        W.Cast(DragonLocation);
                     }
-                    if (Player.Distance(BaronLocation) <= W.Range)
+                    if (Player.Distance(BaronLocation) <= E.Range)
                     {
                         E.Cast(BaronLocation);
                     }
