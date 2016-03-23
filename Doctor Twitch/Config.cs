@@ -19,7 +19,7 @@ namespace Twitch
         {
             Menu = MainMenu.AddMenu(MenuName, MenuName.ToLower());
             Menu.AddGroupLabel("Doctor Twitch");
-            Menu.AddLabel("Upvote for me. Please!");
+            Menu.AddLabel("Halo!");
             Menu.AddLabel("Good Luck.");
             ModesMenu.Initialize();
             PredictionMenu.Initialize();
@@ -396,6 +396,15 @@ namespace Twitch
                 _potionMinMP = MenuMisc.Add("potionMinMP", new Slider("Minimum Mana % to use potion", 20));
                 MenuMisc.AddGroupLabel("Other");
                 _stealthRecall = MenuMisc.Add("stealthRecall", new CheckBox("Use Stealth when recalling"));
+                MenuMisc.AddGroupLabel("Dagame");
+                _showHPBar = MenuMisc.Add("showHPBar", new CheckBox("Show HPbar"));
+                _showStats = MenuMisc.Add("showStats", new CheckBox("Show Stats", false));
+				_showPercentage = MenuMisc.Add("showPercentage", new CheckBox("Show Percentage"));
+				MenuMisc.AddGroupLabel("Calculate");
+				_calculateQ = MenuMisc.Add("calculateQ", new CheckBox("calculateQ", false));
+				_calculateW = MenuMisc.Add("calculateW", new CheckBox("calculateW", false));
+				_calculateE = MenuMisc.Add("calculateE", new CheckBox("calculateE", false));
+				_calculateR = MenuMisc.Add("calculateR", new CheckBox("calculateR", false));
             }
 
             public static void Initialize()
