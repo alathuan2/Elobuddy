@@ -10,7 +10,7 @@ namespace XinZhao
 {
     public static class Config
     {
-        private const string MenuName = "XinZhao";
+        private const string MenuName = "Dr XinZhao";
 
         private static readonly Menu Menu;
 
@@ -18,7 +18,7 @@ namespace XinZhao
         {
             Menu = MainMenu.AddMenu(MenuName, MenuName.ToLower());
             Menu.AddGroupLabel("Doctor XinZhao");
-            Menu.AddLabel("Update 6.5");
+            Menu.AddLabel("Halo!");
             Menu.AddLabel("Good Luck.");
             ModesMenu.Initialize();
             ManaManagerMenu.Initialize();
