@@ -12,8 +12,8 @@ namespace Kalista
     {
         public delegate float DamageToUnitDelegate(AIHeroClient hero);
         public static SpellSlot Ignite;
-        private const int BarWidth = 104;
-        private const int LineThickness = 9;
+        private const int BarWidth = 106;
+        private const int LineThickness = 6;
         private static readonly Vector2 BarOffset = new Vector2(1, 0); // -9, 11
         private static Dictionary<DamageToUnitDelegate, Color> _spells;
 
@@ -45,7 +45,6 @@ namespace Kalista
         {
             _spells = new Dictionary<DamageToUnitDelegate, Color>
             {
-                {QDamage, Color.Blue},
                 {EDamage, Color.Yellow},
                 {IgniteDamage, Color.FromArgb(255, 120, 56, 28)},
             };
@@ -93,10 +92,10 @@ namespace Kalista
                                            (enemy.MaxHealth + enemy.AllShield + enemy.AttackShield + enemy.MagicShield);
                     var startPoint = new Vector2(
                         (int)(enemy.HPBarPosition.X + BarOffset.X + damagePercentage * BarWidth),
-                        (int)(enemy.HPBarPosition.Y + BarOffset.Y) - -5);
+                        (int)(enemy.HPBarPosition.Y + BarOffset.Y) - 2);
                     var endPoint =
                         new Vector2((int)(enemy.HPBarPosition.X + BarOffset.X + healthPercentage * BarWidth) + 1,
-                            (int)(enemy.HPBarPosition.Y + BarOffset.Y) - -5);
+                            (int)(enemy.HPBarPosition.Y + BarOffset.Y) - 2);
                     Drawing.DrawLine(startPoint, endPoint, LineThickness, spell.Value);
 
                     damage -= spell.Key(enemy);

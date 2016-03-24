@@ -447,7 +447,7 @@ namespace Kalista
                                 if (soulbound != null)
                                     if (args.Target.NetworkId == soulbound.NetworkId ||
                                         args.End.Distance(soulbound.Position) <= 200)
-                                        if (soulbound.HealthPercent < 10)
+                                        if (soulbound.HealthPercent < 20)
                                             R.Cast();
                             }
 

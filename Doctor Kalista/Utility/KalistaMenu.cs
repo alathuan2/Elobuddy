@@ -54,7 +54,7 @@ namespace Kalista
             Misc.Add("e.beforedie", new CheckBox("E before die"));
             Misc.Add("w.dragonorbaron", new CheckBox("Auto W on Dragon", false));
             Misc.Add("w.castbaron",
-                new KeyBind("Cast W on Baron", false, KeyBind.BindTypes.HoldActive, "Y".ToCharArray()[0]));
+                new KeyBind("Cast W on Baron", false, KeyBind.BindTypes.HoldActive, "I".ToCharArray()[0]));
 			Misc.Add("w.castdragon",
                 new KeyBind("Cast W on Dragon", false, KeyBind.BindTypes.HoldActive, "U".ToCharArray()[0]));
             //Activator Settings
