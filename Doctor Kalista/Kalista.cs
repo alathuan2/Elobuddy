@@ -64,10 +64,7 @@ namespace Kalista
                     {
                         if (KalistaMenu.GetBoolValue(KalistaMenu.SpellsMenu, "atk.minion"))
                         {
-                            {
-                                if (
-                                    !EntityManager.Heroes.Enemies.Any(
-                                        x => x.IsValidTarget() && Player.IsInAutoAttackRange(x)))
+                                if (!EntityManager.Heroes.Enemies.Any(x => x.IsValidTarget() && Player.IsInAutoAttackRange(x)))
                                 {
                                     var minion =
                                         EntityManager.MinionsAndMonsters.Get(
@@ -321,7 +318,8 @@ namespace Kalista
                 }
                 if (KalistaMenu.Misc["w.dragonorbaron"].Cast<CheckBox>().CurrentValue && !Orbwalker.IsAutoAttacking &&
                     !Player.IsRecalling() && W.Ready() && Player.Position.CountEnemiesInRange(1500) <= 0)	
-                    if (Player.Distance(DragonLocation) <= W.Range)
+                {
+					if (Player.Distance(DragonLocation) <= W.Range)
                     {
                         W.Cast(DragonLocation);
                     }
