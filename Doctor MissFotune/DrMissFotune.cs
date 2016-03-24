@@ -66,10 +66,10 @@ namespace MissFortune
         public static void Load(EventArgs args)
         {
             if (ObjectManager.Player.Hero != Champion.MissFortune) return;
-            Q = new Spell.Targeted(SpellSlot.Q, 655);
+            Q = new Spell.Targeted(SpellSlot.Q, 700);
             Q1 = new Spell.Skillshot(SpellSlot.Q, 1300, SkillShotType.Linear, (int) 0.25f, 1500, (int) 70f);
             W = new Spell.Active(SpellSlot.W);
-            E = new Spell.Skillshot(SpellSlot.E, 800, SkillShotType.Circular, (int) 0.5f, int.MaxValue, 200);
+            E = new Spell.Skillshot(SpellSlot.E, 1000, SkillShotType.Circular, (int) 0.5f, int.MaxValue, 200);
             R = new Spell.Skillshot(SpellSlot.R, 1400, SkillShotType.Cone, (int) 0.25f, int.MaxValue, (int) 100f);
 			WelcomeMsg();
 
