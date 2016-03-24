@@ -10,7 +10,7 @@ namespace Garen
 {
     public static class Config
     {
-        private const string MenuName = "Dr Garen";
+        private const string MenuName = "Garen";
 
         private static readonly Menu Menu;
 
