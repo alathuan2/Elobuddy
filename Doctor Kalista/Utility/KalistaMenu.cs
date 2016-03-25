@@ -5,7 +5,7 @@ namespace Kalista
 {
     public class KalistaMenu
     {
-        public static Menu MenuPrincipal, SpellsMenu, LaneClear, JungleClear, Misc, Drawings, ActivatorSettings;
+        public static Menu MenuPrincipal, SpellsMenu, LaneClear, JungleClear, Misc, Drawings, ActivatorSettings, FleesMenu;
 
         public static int GetSliderValue(Menu menu, string uniqueid)
         {
@@ -70,6 +70,9 @@ namespace Kalista
             Drawings.Add("draw.r", new CheckBox("Draw R"));
             Drawings.Add("draw.e.dmgpercent", new CheckBox("Draw E Damage Percent"));
             Drawings.Add("draw.damageindicator", new CheckBox("Draw Damage Indicator"));
+			//Flee
+            FleesMenu = MenuPrincipal.AddSubMenu("Flee");
+            FleesMenu.Add("atk.minion", new CheckBox("Attack minions/monsters"));
         }
     }
 }

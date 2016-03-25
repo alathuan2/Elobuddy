@@ -17,7 +17,7 @@ namespace Kalista
             2400, 40);
         public static Spell.Targeted W = new Spell.Targeted(SpellSlot.W, 5000);
         public static Spell.Active E = new Spell.Active(SpellSlot.E, 950);
-        public static Spell.Active R = new Spell.Active(SpellSlot.R, 1500);
+        public static Spell.Active R = new Spell.Active(SpellSlot.R, 1200);
         private static readonly Vector3 BaronLocation = new Vector3(5064f, 10568f, -71f);
         private static readonly Vector3 DragonLocation = new Vector3(9796f, 4432f, -71f);
         private static int ELastCastTime;
@@ -126,7 +126,32 @@ namespace Kalista
                                     E.Cast();
                                 }
                     }
-                    //Harass
+                    //Flee
+                    if (Orbwalker.ActiveModesFlags.HasFlag(Orbwalker.ActiveModes.Flee))
+                    {
+                        if (KalistaMenu.GetBoolValue(KalistaMenu.FleesMenu, "atk.minion"))
+                        {
+                                if (!EntityManager.Heroes.Enemies.Any(x => x.IsValidTarget() && Player.IsInAutoAttackRange(x)))
+                                {
+                                    var minion =
+                                        EntityManager.MinionsAndMonsters.Get(
+                                            EntityManager.MinionsAndMonsters.EntityType.Both,
+                                            EntityManager.UnitTeam.Enemy, Player.Position,
+                                            Player.GetAutoAttackRange() + 65)
+                                            .OrderBy(x => x.Distance(Player))
+                                            .FirstOrDefault();
+                                    if (minion != null)
+                                    {
+                                        Orbwalker.ForcedTarget = minion;
+                                    }
+                                }
+                            else
+                            {
+                                Orbwalker.ForcedTarget = null;
+                            }
+                        }
+					}	
+					//Harass
                     if (Orbwalker.ActiveModesFlags.HasFlag(Orbwalker.ActiveModes.Harass))
                     {
                         if (KalistaMenu.GetBoolValue(KalistaMenu.SpellsMenu, "use.q.harass") &&
@@ -444,8 +469,8 @@ namespace Kalista
                                         x => !x.IsDead && x.HasBuff("kalistacoopstrikeally"));
                                 if (soulbound != null)
                                     if (args.Target.NetworkId == soulbound.NetworkId ||
-                                        args.End.Distance(soulbound.Position) <= 200)
-                                        if (soulbound.HealthPercent < 20)
+                                        args.End.Distance(soulbound.Position) <= 1200)
+                                        if (soulbound.HealthPercent < 27)
                                             R.Cast();
                             }
 
