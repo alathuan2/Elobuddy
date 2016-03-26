@@ -72,7 +72,7 @@ namespace Kalista
             Drawings.Add("draw.damageindicator", new CheckBox("Draw Damage Indicator"));
 			//Flee
             FleesMenu = MenuPrincipal.AddSubMenu("Flee");
-            FleesMenu.Add("atk.minion", new CheckBox("Attack minions/monsters"));
+            FleesMenu.Add("atk.minion", new CheckBox("Attack chasing"));
         }
     }
 }

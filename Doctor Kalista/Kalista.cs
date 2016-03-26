@@ -131,24 +131,18 @@ namespace Kalista
                     {
                         if (KalistaMenu.GetBoolValue(KalistaMenu.FleesMenu, "atk.minion"))
                         {
-                                if (!EntityManager.Heroes.Enemies.Any(x => x.IsValidTarget() && Player.IsInAutoAttackRange(x)))
-                                {
-                                    var minion =
-                                        EntityManager.MinionsAndMonsters.Get(
-                                            EntityManager.MinionsAndMonsters.EntityType.Both,
-                                            EntityManager.UnitTeam.Enemy, Player.Position,
-                                            Player.GetAutoAttackRange() + 65)
-                                            .OrderBy(x => x.Distance(Player))
-                                            .FirstOrDefault();
-                                    if (minion != null)
-                                    {
-                                        Orbwalker.ForcedTarget = minion;
-                                    }
-                                }
-                            else
-                            {
-                                Orbwalker.ForcedTarget = null;
-                            }
+                            Orbwalker.DisableAttacking = false;
+                            Orbwalker.DisableMovement = false;
+
+                            var target =
+                                ObjectManager.Get<Obj_AI_Base>()
+                                .FirstOrDefault(
+                                    x => 
+                                        x.IsValidTarget(Player.GetAutoAttackRange())
+                                        && !x.IsMe 
+                                        && !x.IsAlly);
+
+                            Orbwalker.ForcedTarget = target;
                         }
 					}	
 					//Harass
