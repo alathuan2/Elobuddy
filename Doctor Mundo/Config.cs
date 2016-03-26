@@ -146,7 +146,7 @@ namespace DrMundo
                 {
                     MenuModes.AddGroupLabel("Harass");
                     _useQ = MenuModes.Add("harassUseQ", new CheckBox("Use Q"));
-                    _autoQ = MenuModes.Add("harassAutoQ", new CheckBox("Use Q automatically"));
+                    _autoQ = MenuModes.Add("harassAutoQ", new CheckBox("Auto Harass Q"));
                     _useW = MenuModes.Add("harassUseW", new CheckBox("Use W"));
                     _useE = MenuModes.Add("harassUseE", new CheckBox("Use E"));
                     _minAutoQHealth = MenuModes.Add("minAutoQHealth", new Slider("Minimum health % to auto Q", 65, 0, 100));
@@ -325,20 +325,20 @@ namespace DrMundo
             static MiscMenu()
             {
                 MenuMisc = Config.Menu.AddSubMenu("Misc");
-                MenuMisc.AddGroupLabel("AntiGapcloser");
-                _gapcloserQ = MenuMisc.Add("gapcloserQ", new CheckBox("Use Q to against gapclosers"));
+                MenuMisc.AddGroupLabel("Auto On/Off W");
+				_autoWOff = MenuMisc.Add("otherAutoWOff", new CheckBox("Automatically turn W off when no enemies around"));
+				MenuMisc.AddGroupLabel("AntiGapcloser");
+                _gapcloserQ = MenuMisc.Add("gapcloserQ", new CheckBox("Use Q"));
                 MenuMisc.AddGroupLabel("KillSteal");
                 _ksQ = MenuMisc.Add("ksE", new CheckBox("KillSteal Q"));
                 _ksIgnite = MenuMisc.Add("ksIgnite", new CheckBox("KillSteal Ignite"));
                 MenuMisc.AddGroupLabel("Auto R usage");
-                _autoR = MenuMisc.Add("autoR", new CheckBox("Use R automatically"));
-                _autoRMinHP = MenuMisc.Add("autoRMinHP", new Slider("HP % below which to ult", 15));
+                _autoR = MenuMisc.Add("autoR", new CheckBox("Use R"));
+                _autoRMinHP = MenuMisc.Add("autoRMinHP", new Slider("HP %", 15));
                 _autoRMinEnemies = MenuMisc.Add("autoRMinEnemies", new Slider("Minimum enemies around to ult", 1, 0, 5));
                 MenuMisc.AddGroupLabel("Auto pot usage");
-                _potion = MenuMisc.Add("potion", new CheckBox("Use potions"));
+                _potion = MenuMisc.Add("potion", new CheckBox("Potions"));
                 _potionMinHP = MenuMisc.Add("potionminHP", new Slider("Minimum Health % to use potion", 50));
-                MenuMisc.AddGroupLabel("Other");
-                _autoWOff = MenuMisc.Add("otherAutoWOff", new CheckBox("Automatically turn W off when no enemies around"));
             }
 
             public static void Initialize()
@@ -369,8 +369,8 @@ namespace DrMundo
             static HealthManagerMenu()
             {
                 MenuHealthManager = Config.Menu.AddSubMenu("Health Manager");
-                _minQHealth = MenuHealthManager.Add("minQHealth", new Slider("Minimum health % to use Q", 0, 0, 100));
-                _minWHealth = MenuHealthManager.Add("minWHealth", new Slider("Minimum health % to use W", 50, 0, 100));
+                _minQHealth = MenuHealthManager.Add("minQHealth", new Slider("Minimum health % to use Q", 10, 0, 100));
+                _minWHealth = MenuHealthManager.Add("minWHealth", new Slider("Minimum health % to use W", 15, 0, 100));
                 _minEQHealth = MenuHealthManager.Add("minEHealth", new Slider("Minimum health % to use E", 20, 0, 100));
             }
 
