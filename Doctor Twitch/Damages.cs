@@ -18,8 +18,8 @@ namespace Twitch
             }
             return
                 (int)
-                    (new int[] { 20, 35, 50, 65, 80 }[SpellManager.E.Level - 1]) +
-                     stacks * (new int[] { 15, 20, 25, 30, 35 }[SpellManager.E.Level - 1] + 0.2f * Player.Instance.TotalMagicalDamage + 0.25f * (Player.Instance.TotalAttackDamage - Player.Instance.BaseAttackDamage));
+                    (new int[] { 25, 40, 55, 70, 85 }[SpellManager.E.Level - 1]) +
+                     stacks * (new int[] { 20, 25, 30, 35, 40 }[SpellManager.E.Level - 1] + 0.2f * Player.Instance.TotalMagicalDamage + 0.25f * (Player.Instance.TotalAttackDamage - Player.Instance.BaseAttackDamage));
         }
 
         public static float EDamage(Obj_AI_Base target)
