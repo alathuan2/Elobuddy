@@ -108,7 +108,7 @@ namespace Tristana
                 {
                     MenuModes.AddGroupLabel("Combo");
                     _useQ = MenuModes.Add("comboUseQ", new CheckBox("Use Q"));
-                    _useW = MenuModes.Add("comboUseW", new CheckBox("Use W"));
+                    _useW = MenuModes.Add("comboUseW", new CheckBox("Use W", false));
                     _useE = MenuModes.Add("comboUseE", new CheckBox("Use E"));
                     _useR = MenuModes.Add("comboUseR", new CheckBox("Use R (finisher)"));
                     _useItems = MenuModes.Add("comboUseItems", new CheckBox("Use Cutlass/BOTRK/Youmuu"));
@@ -188,10 +188,10 @@ namespace Tristana
                 {
                     MenuModes.AddGroupLabel("LaneClear");
                     _useQ = MenuModes.Add("laneUseQ", new CheckBox("Use Q"));
-                    _useW = MenuModes.Add("laneUseW", new CheckBox("Use W"));
+                    _useW = MenuModes.Add("laneUseW", new CheckBox("Use W", false));
                     _useE = MenuModes.Add("laneUseE", new CheckBox("Use E"));
-                    _minWTargets = MenuModes.Add("minWTargetsLC", new Slider("Minimum targets for W", 6, 1, 10));
-                    _minETargets = MenuModes.Add("minETargetsLC", new Slider("Minimum targets for E", 3, 1, 10));
+                    _minWTargets = MenuModes.Add("minWTargetsLC", new Slider("Minimum targets for W", 9, 1, 10));
+                    _minETargets = MenuModes.Add("minETargetsLC", new Slider("Minimum targets for E", 4, 1, 10));
                 }
 
                 public static void Initialize()
@@ -236,9 +236,9 @@ namespace Tristana
                 {
                     MenuModes.AddGroupLabel("JungleClear");
                     _useQ = MenuModes.Add("jungleUseQ", new CheckBox("Use Q"));
-                    _useW = MenuModes.Add("jungleUseW", new CheckBox("Use W"));
+                    _useW = MenuModes.Add("jungleUseW", new CheckBox("Use W", false));
                     _useE = MenuModes.Add("jungleUseE", new CheckBox("Use E"));
-                    _minWTargets = MenuModes.Add("minWTargetsJC", new Slider("Minimum targets for W", 2, 1, 10));
+                    _minWTargets = MenuModes.Add("minWTargetsJC", new Slider("Minimum targets for W", 6, 1, 10));
                     _minETargets = MenuModes.Add("minETargetsJC", new Slider("Minimum targets for E", 2, 1, 10));
                 }
 
